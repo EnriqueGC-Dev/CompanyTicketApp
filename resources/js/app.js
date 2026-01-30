@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import store from './store/store';
 import '@mdi/font/css/materialdesignicons.css';
+import '../scss/main.scss';
 import { es } from 'vuetify/locale'
 
 // Vuetify

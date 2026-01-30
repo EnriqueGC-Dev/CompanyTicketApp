@@ -1,5 +1,6 @@
 <template>
   LOGIN TEMPLATE
+  <v-btn class="btn-primary" @click="login">Iniciar sesión</v-btn>
 </template>
 
 <script>
@@ -52,7 +53,6 @@ export default {
 
 </script>
 
+<!-- styles moved to shared SCSS -->
 <style scoped>
-
-
 </style>

@@ -1,0 +1,14 @@
+@use '../_variables.scss' as *;
+
+.btn-primary {
+  background-color: $primary !important;
+  color: $white !important;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: $complementary_hover !important;
+}
