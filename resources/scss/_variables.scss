@@ -1,13 +1,23 @@
 // Project SCSS variables (distinctive test colors)
 
 // ===== THEME COLORS =====
-$primary: #000066; // bright pink
-$secondary: #00ccff; // cyan
-$complementary: #ccff00; // lime
-$complementary_hover: #ff6600; // orange
-$text: #0f0f0f; // near-black
-$white: #fafdff; // off-white
-$page_background: #101820; // gunmetal
+$primary: #00C8FF; // bright pink
+$secondary: #8C00FF; // cyan
+$complementary: #FF00AA; // lime
+
+$light_bg_start: #3a2165; // light cyan
+$light_bg_end: #58accd; // light lavender
+$dark_bg_start: #0A1228; // rich black
+$dark_bg_end: #280046; // dark purple
+
+// Text colors
+$text_light_primary: #0F172A; // near-black
+$text_light_secondary: #475569; // dark gray
+$text_dark_primary: #F1F5F9; // off-white
+$text_dark_secondary: #94A3B8; // light gray
+
+$light_background: linear-gradient(135deg, $light_bg_start, $light_bg_end); // light gradient
+$dark_background: linear-gradient(135deg, $dark_bg_start, $dark_bg_end); // dark gradient
 
 // Shadows
 $theme_color_shadow_1: #1a1a2b;
@@ -15,14 +25,20 @@ $theme_color_shadow_2: #2b2b3b;
 $theme_color_shadow_3: #3c3c4c;
 $theme_color_shadow_4: #4d4d5d;
 
-// Additional colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+// Cards
+$card_bg_light_primary: #FFFFFF; // white
+$card_bg_light_secondary: #F4F8FF; // light blue-gray
+$card_bg_dark_primary: #121A35; // dark blue-gray
+$card_bg_dark_secondary: #18224A; // dark blue-gray
+
+// Border
+$border_light_1: #DCE7FF; // light gray
+$border_light_2: #C7D7FF; // lighter gray
+$border_dark_1: #233056; // dark gray
+$border_dark_2: #2F3E6B; // darker gray
+
+// States
+$success: #00E676; // green
+$error: #FF3B5C; // red
+$warning: #FFB800; // orange
+$info: #00B3FF; // blue

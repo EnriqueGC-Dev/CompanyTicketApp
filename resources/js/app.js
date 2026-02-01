@@ -1,11 +1,11 @@
 import { createApp } from 'vue';
 import store from './store/store';
 import '@mdi/font/css/materialdesignicons.css';
-import '../scss/main.scss';
 import { es } from 'vuetify/locale'
 
 // Vuetify
 import 'vuetify/styles'
+import '../scss/main.scss';
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'

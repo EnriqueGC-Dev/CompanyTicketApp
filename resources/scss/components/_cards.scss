@@ -1,0 +1,24 @@
+@import '../variables';
+
+// Base card style (apply specifically to Vuetify v-card)
+.v-card.card {
+  border-radius: 22px;
+}
+
+// Card Login
+.v-card.card-login {
+  background-color: $card_bg_light_primary;
+  color: $text_light_primary;
+  box-shadow: 0 2px 8px rgba($theme_color_shadow_1, 0.08);
+  border: 5px solid $primary;
+
+  .card-title {
+    color: $primary;
+    font-weight: 550;
+    border-bottom: 2px solid $border_light_1;
+  }
+
+  .card-subtitle {
+    color: $text_light_secondary;
+  }
+}

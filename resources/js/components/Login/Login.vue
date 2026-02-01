@@ -1,6 +1,62 @@
 <template>
-  LOGIN TEMPLATE
-  <v-btn class="btn-primary" @click="login">Iniciar sesión</v-btn>
+  <v-app class="light_background">
+    <v-main>
+      <v-container class="fill-height" fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="12" sm="8" md="6" lg="4">
+            <v-card class="card card-login pa-2">
+              <v-card-title class="card-title" align="center">
+                <div>
+                  <img src="../../../logos/logo_negro.svg" alt="Logo" class="logo" width="25%" height="auto"/>
+                </div>
+                Iniciar Sesión
+              </v-card-title>
+              
+              <v-card-text>
+                <v-form @submit.prevent="login">
+                  <v-text-field
+                    v-model="username"
+                    label="Email"
+                    variant="underlined"
+                    prepend-inner-icon="mdi-email"
+                  ></v-text-field>
+
+                  <v-text-field
+                    v-model="password"
+                    label="Contraseña"
+                    type="password"
+                    variant="underlined"
+                    prepend-inner-icon="mdi-lock"
+                  ></v-text-field>
+
+                  <v-checkbox
+                    label="Recordarme"
+                    color="primary"
+                  ></v-checkbox>
+
+                  <v-btn
+                    class="btn-primary"
+                    block
+                    @click="login"
+                  >
+                    Iniciar Sesión
+                  </v-btn>
+
+                    <v-btn
+                      variant="plain"
+                      color="primary"
+                      block
+                    >
+                      ¿has olvidado tu contraseña?
+                    </v-btn>
+                </v-form>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -12,8 +68,6 @@ export default {
       username: '',
       password: '',
 
-      showPopUp: false,
-      PopUpText: '',
     }
   },
   methods: {
@@ -52,7 +106,3 @@ export default {
   }
 
 </script>
-
-<!-- styles moved to shared SCSS -->
-<style scoped>
-</style>

@@ -1,14 +1,61 @@
 @use '../_variables.scss' as *;
 
 .btn-primary {
-  background-color: $primary !important;
-  color: $white !important;
+  background-color: #00C8FF !important;
+  color: #001018 !important;
   border: none;
   padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
 }
-
 .btn-primary:hover {
-  background-color: $complementary_hover !important;
+  background-color: #33D6FF !important;
+}
+
+.btn-secondary {
+  background-color: #8C00FF !important;
+  color: #FFFFFF !important;
+  border: 2px solid #00C8FF !important;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #A033FF !important;
+}
+
+.btn-accent {
+  background-color: #FF00AA !important;
+  color: #FFFFFF !important;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-accent:hover {
+  background-color: #FF33BB !important;
+}
+
+.btn-light-transparent {
+  background-color: transparent !important;
+  color: #00C8FF !important;
+  border: 2px solid #FFFFFF !important;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-light-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-dark-transparent {
+  background-color: transparent !important;
+  color: #8C9EFF !important;
+  border: 2px solid #001018 !important;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-dark-transparent:hover {
+  background-color: rgba(140, 0, 255, 0.15) !important;
 }

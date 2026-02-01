@@ -1,5 +1,5 @@
 <template>
-    <v-app class="bg-grey-lighten-3">
+    <v-app class="dark_background">
       <Navbar @OpenCloseNavbar="OpenCloseNavbar"></Navbar>
       <Sidebar v-model="vShowNavbar"></Sidebar>
       

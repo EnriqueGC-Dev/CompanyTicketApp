@@ -1,0 +1,11 @@
+@use '../_variables.scss' as *;
+
+.dark_background {
+  background: #{$dark_background} !important;
+  min-height: 100vh;
+}
+
+.light_background {
+  background: #{$light_background} !important;
+  min-height: 100vh;
+}
