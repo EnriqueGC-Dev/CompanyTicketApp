@@ -17,7 +17,13 @@ import router from './router';
 import Index from './components/Index.vue';
 import App from './components/App.vue';
 
-import Login from './components/Login/Login.vue';
+import Login from './components/pages/Login.vue';
+import Navigation from './components/navigation/navigation.vue';
+
+import myTickets from './components/pages/dashboard/MyTickets.vue';
+import UnassignedTickets from './components/pages/dashboard/UnassignedTickets.vue';
+import DepartmentTickets from './components/pages/dashboard/DepartmentTickets.vue';
+import OpenClosedTickets from './components/pages/dashboard/OpenClosedTickets.vue';
 
 
 const app = createApp(Index)
@@ -40,6 +46,10 @@ app.use(router)
 
 app.component('App', App);
 app.component('Login', Login);
-
+app.component('Navigation', Navigation);
+app.component('myTickets', myTickets);
+app.component('UnassignedTickets', UnassignedTickets);
+app.component('DepartmentTickets', DepartmentTickets);
+app.component('OpenClosedTickets', OpenClosedTickets);
 
 app.mount('#app');

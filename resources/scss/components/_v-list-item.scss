@@ -1,0 +1,68 @@
+@import '../variables';
+
+// Styles for Vuetify v-list-item with light and dark text options
+
+.v-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  .v-list-item__icon,
+  .v-list-item__prepend,
+  .v-list-item__avatar {
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Light text variant (use on dark backgrounds)
+  &.text-light {
+    color: $text_dark_primary;
+
+    .v-list-item__title {
+      color: $text_dark_primary;
+      font-weight: 600;
+    }
+
+    .v-list-item__subtitle {
+      color: $text_dark_secondary;
+      font-weight: 400;
+    }
+
+    .v-list-item__icon svg,
+    .v-list-item__avatar img {
+      color: $text_dark_primary;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+  }
+
+  // Dark text variant (use on light backgrounds)
+  &.text-dark {
+    color: $text_light_primary;
+
+    .v-list-item__title {
+      color: $text_light_primary;
+      font-weight: 600;
+    }
+
+    .v-list-item__subtitle {
+      color: $text_light_secondary;
+      font-weight: 400;
+    }
+
+    .v-list-item__icon svg,
+    .v-list-item__avatar img {
+      color: $text_light_primary;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+}

@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 use App\Models\User;
-use App\Models\Departamento;
 
 use Exception;
 
@@ -21,6 +20,7 @@ class UserController extends BaseController
     //Inicio de sesión
     public function login(Request $request)
     {
+        error_log('Login attempt for email: ' . $request->input('email'));
         $credentials = request(['email', 'password']);
 
         if (Auth::attempt($credentials)) {
@@ -69,17 +69,15 @@ class UserController extends BaseController
         $user = $request->user();
 
         if ($user instanceof User) {
-            // Load related models that exist (empresa, departamento) to avoid undefined relation errors
-            $user->loadMissing(['departamento']);
+
 
             $userData = [
                 'id' => $user->id,
                 'name' => $user->name,
+                'surname' => $user->surname,
                 'email' => $user->email,
-                'departamento' => $user->departamento ? [
-                    'id' => $user->departamento->departamento_id,
-                    'nombre' => $user->departamento->departamento_nombre,
-                ] : null,
+                'user_role_id' => $user->user_role_id,
+                'user_photo' => $user->user_photo,
             ];
 
             $json = [

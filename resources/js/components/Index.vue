@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app :class="getState">
         <v-main>
           <Login v-if="authentication === false"/>
           <App   v-if="authentication" />

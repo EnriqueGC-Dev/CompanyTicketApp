@@ -65,8 +65,8 @@ import axios from "axios";
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      username: 'superuser@test.com',
+      password: 'password',
 
     }
   },
@@ -92,8 +92,6 @@ export default {
                   });
               } else {
                 if(response.data.status == 'ERROR') {
-                  this.PopUpText = response.data.message;
-                  this.showPopUp = true;
                 }
               }
           })

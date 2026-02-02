@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('surname');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedBigInteger('user_role_id')->nullable();
+            $table->string('user_photo')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -35,6 +38,20 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        // Insert default roles
+        DB::table('users')->insert([
+            [
+                'name' => 'Enrique',
+                'surname' => 'García',
+                'email' => 'superuser@test.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+                'user_role_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 
     /**

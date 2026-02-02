@@ -8,6 +8,11 @@ let store = createStore({
         return {
             authentication: false,
             user_id: null,
+            user_name: null,
+            user_surname: null,
+            user_email: null,
+            user_role_id: null,
+            user_photo: null,
         }
     },
     mutations: {
@@ -17,6 +22,11 @@ let store = createStore({
             if (response.data.status == 'OK') {
                 state.authentication = true;
                 state.user_id = response.data.user.id;
+                state.user_name = response.data.user.name;
+                state.user_surname = response.data.user.surname;
+                state.user_email = response.data.user.email;
+                state.user_role_id = response.data.user.user_role_id;
+                state.user_photo = response.data.user.user_photo;
                 if (typeof callback == 'function') {
                     callback(true);
                 }
