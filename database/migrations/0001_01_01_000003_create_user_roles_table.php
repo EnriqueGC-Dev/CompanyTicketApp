@@ -21,22 +21,22 @@ return new class extends Migration
         // Insert default roles
         DB::table('user_roles')->insert([
             [
-                'user_role_name' => 'superuser',
+                'user_role_name' => 'Superuser',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'user_role_name' => 'company_admin',
+                'user_role_name' => 'Administrador Empresa',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'user_role_name' => 'department_admin',
+                'user_role_name' => 'Administrador Departamento',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'user_role_name' => 'employee',
+                'user_role_name' => 'Empleado',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

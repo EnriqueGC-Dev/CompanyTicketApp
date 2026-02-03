@@ -13,7 +13,6 @@
               </v-card-title>
               
               <v-card-text>
-                <v-form @submit.prevent="login">
                   <v-text-field
                     v-model="username"
                     label="Email"
@@ -32,6 +31,7 @@
                   <v-checkbox
                     label="Recordarme"
                     color="primary"
+                    density="compact"
                   ></v-checkbox>
 
                   <v-btn
@@ -49,7 +49,6 @@
                     >
                       ¿has olvidado tu contraseña?
                     </v-btn>
-                </v-form>
               </v-card-text>
             </v-card>
           </v-col>
@@ -104,3 +103,12 @@ export default {
   }
 
 </script>
+
+<style scoped>
+:deep(.v-checkbox) {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+</style>

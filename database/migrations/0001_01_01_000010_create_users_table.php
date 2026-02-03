@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->unsignedBigInteger('user_role_id')->nullable();
             $table->string('user_photo')->nullable();
+            $table->boolean('user_active')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
@@ -48,6 +49,36 @@ return new class extends Migration
                 'password' => Hash::make('password'),
                 'email_verified_at' => now(),
                 'user_role_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Laura',
+                'surname' => 'Izquierdo',
+                'email' => 'admin@test.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+                'user_role_id' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Biel',
+                'surname' => 'Ratto',
+                'email' => 'biel@test.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+                'user_role_id' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'María',
+                'surname' => 'García',
+                'email' => 'maria@test.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+                'user_role_id' => 4,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

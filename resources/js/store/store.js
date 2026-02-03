@@ -13,6 +13,7 @@ let store = createStore({
             user_email: null,
             user_role_id: null,
             user_photo: null,
+            user_active: null,
         }
     },
     mutations: {
@@ -27,6 +28,7 @@ let store = createStore({
                 state.user_email = response.data.user.email;
                 state.user_role_id = response.data.user.user_role_id;
                 state.user_photo = response.data.user.user_photo;
+                state.user_active = response.data.user.user_active;
                 if (typeof callback == 'function') {
                     callback(true);
                 }

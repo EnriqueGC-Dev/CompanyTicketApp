@@ -79,7 +79,7 @@ export default {
       botones: [
         { title: "Dashboard", icon: "mdi-view-dashboard", route: "/dashboard" },
         { title: "Tickets", icon: "mdi-ticket-outline", route: "/tickets" },
-        { title: "Usuarios", icon: "mdi-account-multiple", route: "/users" },
+        { title: "Empleados", icon: "mdi-account-multiple", route: "/empleados" },
         { title: "Configuración", icon: "mdi-cog-outline", route: "/settings" },
       ],
     };

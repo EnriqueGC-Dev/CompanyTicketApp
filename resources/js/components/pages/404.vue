@@ -46,7 +46,7 @@ export default {
   name: 'NotFound',
   methods: {
     goHome() {
-      this.$router.push('/').catch((err) => err);
+      this.$router.push('/dashboard').catch((err) => err);
     },
   },
 }

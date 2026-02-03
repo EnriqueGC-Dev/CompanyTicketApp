@@ -94,5 +94,23 @@ class UserController extends BaseController
         }
 
         return response()->json($json);
-    }    
+    }
+    
+    // Obtener todos los usuarios
+    public function getAllUsers(Request $request)
+    {
+        try {
+            $users = User::with('role')->get();   
+            return response()->json([
+                'status' => 'OK',
+                'users' => $users
+            ], 200);
+        } catch (Exception $e) {
+            Log::error('Error fetching users: ' . $e->getMessage());
+            return response()->json([
+                'status' => 'ERROR',
+                'message' => 'Error fetching users'
+            ], 500);    
+        }
+    }
 }
